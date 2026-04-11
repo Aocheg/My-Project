@@ -1,40 +1,37 @@
 package main
 
 import (
-	// "fmt"
-
 	"fmt"
-	"strconv"
 
-	// "strconv"
+	"strconv"
 	"strings"
 )
 
-// func NumberToDecimal(words []string) []string {
-// 	var result []string
+func NumberToDecimal(words []string) []string {
+	var result []string
 
-// 	for i := 0; i < len(words); i++ {
-// 		if words[i] == "(hex)" {
-// 			if len(result) > 0 {
-// 				if val, err := strconv.ParseInt(result[len(result)-1], 16, 64); err == nil {
-// 					result[len(result)-1] = strconv.FormatInt(val, 10)
-// 				}
-// 			}
+	for i := 0; i < len(words); i++ {
+		if words[i] == "(hex)" {
+			if len(result) > 0 {
+				if val, err := strconv.ParseInt(result[len(result)-1], 16, 64); err == nil {
+					result[len(result)-1] = strconv.FormatInt(val, 10)
+				}
+			}
 
-// 		} else if words[i] == "(bin)" {
-// 			if len(result) > 0 {
-// 				if val2, err := strconv.ParseInt(result[len(result)-1], 2, 64); err == nil {
-// 					result[len(result)-1] = strconv.FormatInt(val2, 10)
-// 				}
-// 			}
-// 		} else {
-// 			result = append(result, words[i])
+		} else if words[i] == "(bin)" {
+			if len(result) > 0 {
+				if val2, err := strconv.ParseInt(result[len(result)-1], 2, 64); err == nil {
+					result[len(result)-1] = strconv.FormatInt(val2, 10)
+				}
+			}
+		} else {
+			result = append(result, words[i])
 
-// 		}
+		}
 
-//		}
-//		return result
-//	}
+	}
+	return result
+}
 func CapitalizeFirstWords(text string) string {
 	words := strings.Fields(text)
 
@@ -65,9 +62,8 @@ func CapitalizeFirstWords(text string) string {
 
 }
 
-
 func main() {
-	// 	fmt.Println(NumberToDecimal([]string{"1E", "(hex)", "files", "wered", "added"}))
-	// 	fmt.Println(NumberToDecimal([]string{"10", "(bin)", "years"}))
-	fmt.Println(CapitalizeFirstWords("go is very cool  (cap,2)"))
+	fmt.Println(NumberToDecimal([]string{"1E", "(hex)", "files", "wered", "added"}))
+	fmt.Println(NumberToDecimal([]string{"10", "(bin)", "years"}))
+	fmt.Println(CapitalizeFirstWords("go is very cool  (cap,3)"))
 }
