@@ -1,0 +1,15 @@
+hello world (up)
+HELLO WORLD (low, 2)
+we are here (cap, 2)
+1e (hex)
+10 (bin)
+
+hello , world !
+
+" '  hello '  "
+
+"      hello     "
+
+a car, a amaizing home, an car
+
+hello ...
