@@ -5,7 +5,6 @@ import (
 )
 
 func main() {
-	// input = strings.TrimSuffix(input, "\n")
 
 	input, err := GetInputArgs()
 	if err != nil {
