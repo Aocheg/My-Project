@@ -1,53 +1,79 @@
 package main
 
-import (
-	"fmt"
-	"os"
-	"strings"
-)
+// import (
+// 	"fmt"
+// 	"os"
+// 	"strings"
+// )
 
-func ParseArgs(input string) string {
+// func ParseArgs(input string) string {
 
-	args := os.Args
+// 	args := os.Args
 
-	fmt.Println(len(args))
+// 	fmt.Println(len(args))
 
-	for i, val := range args {
-		fmt.Println(i, val)
-	}
-	return ""
-}
+// 	for i, val := range args {
+// 		fmt.Println(i, val)
+// 	}
+// 	return ""
+// }
 
-func main() {
+// func main() {
 
-	if len(os.Args) != 2 {
-		fmt.Println("Usage: go run . \"Hello\"")
-		return
-	}
-	input := os.Args[1]
-	fmt.Println(input)
+// 	if len(os.Args) != 2 {
+// 		fmt.Println("Usage: go run . \"Hello\"")
+// 		return
+// 	}
+// 	input := os.Args[1]
+// 	// fmt.Println(input)
 
-	data, err := os.ReadFile("standard.txt")
-	if err != nil {
-		fmt.Println("Error:", err)
-	}
+// 	data, err := os.ReadFile("standard.txt")
+// 	if err != nil {
+// 		fmt.Println("Error:", err)
+// 		return
+// 	}
 
-	content := string(data)
-	// fmt.Println(content)
+// 	content := string(data)
+// 	// fmt.Println(content)
 
-	content = strings.ReplaceAll(content, "\r\n", "\n")
+// 	content = strings.ReplaceAll(content, "\r\n", "\n")
 
-	blocks := strings.Split(content, "\n")
-	// fmt.Println((blocks))
+// 	blocks := strings.Split(content, "\n")
+// 	// fmt.Println((blocks))
 
-	clean := []string{}
+// 	asciiMap := map[rune][]string{}
 
+// 	char := ' '
 
-	for i := 0; i+8 <= len(clean); i += 9 {
-		charBlock := clean[i : i+8]
-		fmt.Println(charBlock)
-	}
+// 	for i := 0; i+8 <= len(blocks); i += 9 {
+// 		charBlock := blocks[i : i+8]
 
-	// fmt.Println(ParseArgs("Hello"))
+// 		asciiMap[char] = charBlock
+// 		char++
 
-}
+// 	}
+// 	// for _, line := range asciiMap['A'] {
+// 	// 	fmt.Println(line)
+// 	// }
+
+// 	lines := strings.Split(input, "\\n")
+
+// 	for _, word := range lines {
+// 		for row := 0; row < 8; row++ {
+// 			for _, ch := range word {
+// 				validChar, ok := asciiMap[ch]
+
+// 				if !ok {
+// 					fmt.Println("Error: Unsupported Character")
+// 					return
+// 				}
+// 				fmt.Print(validChar[row])
+// 			}
+// 			fmt.Println()
+// 		}
+
+// 	}
+
+// 	// fmt.Println(asciiMap['A'])
+
+// }
