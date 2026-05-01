@@ -15,10 +15,6 @@ func main() {
 	if input == "" {
 		return
 	}
-	// if input == "\n" {
-	// 	fmt.Println()
-	// 	return
-	// }
 
 	content, err := ReadBannerFile("standard.txt")
 	if err != nil {
