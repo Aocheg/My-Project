@@ -9,16 +9,16 @@ import (
 
 func LoadBanner(filename string) (map[rune][]string, error) {
 
-	data, err := os.ReadFile(filename)
+	file, err := os.ReadFile(filename)
 	if err != nil {
 		return nil, fmt.Errorf("Error reading file")
 	}
 
-	if len(data) == 0 {
-		return nil, errors.New("invalid data")
+	if len(file) == 0 {
+		return nil, errors.New("empty file")
 	}
 
-	splitfile := strings.Split(string(data), "\n")
+	splitfile := strings.Split(string(file), "\n")
 	asciiMap := make(map[rune][]string)
 
 	for i := 32; i < 127; i++ {
