@@ -54,6 +54,24 @@ func main() {
 	fmt.Println(fruit)
 	names1 := []string{"Mary", "John", "Peter"}
 	fmt.Println(names1[0])
+	scores := map[string]int{
+		"Mary":  90,
+		"John":  80,
+		"Peter": 95,
+	}
+	fmt.Println(scores["Peter"])
+
+	word := "GO"
+
+	for _, char := range word {
+		fmt.Println(char)
+	}
+	var err error = nil
+	if err != nil {
+		fmt.Println("Problem")
+	} else {
+		fmt.Println("Everything is okay")
+	}
 	SayHello()
 	Clap()
 	Clap()
