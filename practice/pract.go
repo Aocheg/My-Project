@@ -19,13 +19,6 @@ func Double(number int) int {
 	return number * 2
 }
 
-// func IfStatement(age int) string {
-// 	age = 20
-// 	if age >= 18 {
-// 		return "come in"
-// 	}
-
-// }
 func main() {
 	age := 10
 	if age >= 18 {
